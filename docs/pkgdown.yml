@@ -1,0 +1,12 @@
+pandoc: 2.11.4
+pkgdown: 2.0.2
+pkgdown_sha: ~
+articles:
+  01-fill_strips_top: 01-fill_strips_top.html
+  02-fill_strips_right: 02-fill_strips_right.html
+  03-stat_summary_boxplot: 03-stat_summary_boxplot.html
+  04-stat_info_boxplot: 04-stat_info_boxplot.html
+  05-shaded_2d_venn: 05-shaded_2d_venn.html
+  06-shaded_3d_venn: 06-shaded_3d_venn.html
+last_built: 2022-04-01T12:05Z
+

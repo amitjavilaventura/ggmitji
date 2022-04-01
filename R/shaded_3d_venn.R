@@ -31,13 +31,14 @@ shaded_3d_venn <- function(highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoB
                            line.col = "black"){
 
   # load required packages
-  library(polyclip)
-  library(VennDiagram)
-  library(ggplot2)
-  library(cowplot)
+  require(VennDiagram)
+  require(polyclip)
+  require(magrittr)
+  require(ggplot2)
+  require(cowplot)
 
   # Check that parameters are OK.
-  if(!highlight %in% c("AB", "AnoB", "noAB", "all")){ stop("'highlight' must be a character vector with one or many of the intersection names or 'all'. If 'all', the character must be of length 1.") }
+  if(!highlight %in% c("all", "ABC", "ABnoC", "AnoBC", "noABC", "AnoBnoC", "noABnoC", "noAnoBC")){ stop("'highlight' must be a character vector with one or many of the intersection names or 'all'. If 'all', the character must be of length 1.") }
   if(length(color) != length(highlight)){ stop("'color' must be a character vector with the same length as 'highlight'.") }
   if(!label.pos %in% c("bottom.right", "right.bottom", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top")){ stop("Incorrect value for 'label.pos'.") }
 

@@ -1,0 +1,51 @@
+---
+title: "stat_info_boxplot()"
+author: "Adrià Mitjavila Ventura"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    self_contained: yes
+    mode: selfcontained
+vignette: >
+  %\VignetteIndexEntry{stat_info_boxplot()}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center", fig.width = 4, fig.height = 4, 
+                      warning = FALSE, error = FALSE, message = FALSE)
+devtools::load_all("..")
+```
+
+Last updated: `r Sys.Date()`
+
+***
+
+```{r results=FALSE}
+# Load ggplot2
+library(ggplot2)
+
+# Load ggmitji 
+library(ggmitji)
+
+# Load patchwork (to put plots together)
+library(patchwork)
+```
+
+```{r}
+# Create base boxplot with geom_boxplot, stat_boxplot or stat_summary_boxplot
+p <- ggplot(mpg, aes(class, hwy)) + stat_summary_boxplot()
+p
+```
+
+```{r}
+p + stat_info_boxplot(statistic = "n", label = "N=", y = 10, text_color = "darkblue", text_size = 3) + labs(title = "Boxplots with number of observations")
+p + stat_info_boxplot(statistic = "mean", label = "µ=", y = "min", text_color = "darkred", text_size = 3) + labs(title = "Boxplots with mean of observations")
+p + stat_info_boxplot(statistic = "sd", label = "", y = "lower", text_color = "red", text_size = 3) + labs(title = "Boxplots with st. dev. of observations")
+p + stat_info_boxplot(statistic = "median", label = "", y = "upper", text_color = "darkgreen", text_size = 3) + labs(title = "Boxplots with median of observations")
+```
+
+

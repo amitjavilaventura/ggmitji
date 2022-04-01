@@ -1,5 +1,5 @@
 ---
-title: "fill_strips_top()"
+title: "fill_strips_right()"
 author: "Adrià Mitjavila Ventura"
 output:
   html_document:
@@ -9,7 +9,7 @@ output:
     self_contained: yes
     mode: selfcontained
 vignette: >
-  %\VignetteIndexEntry{fill_strips_top()}
+  %\VignetteIndexEntry{fill_strips_right()}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -35,11 +35,11 @@ library(ggmitji)
 ```{r}
 # Example plot from https://ggplot2.tidyverse.org/reference/facet_grid.html
 p <- ggplot(mpg, aes(displ, cty)) + geom_point()
-p <- p + facet_grid(cols = vars(drv))
+p <- p + facet_grid(rows = vars(drv))
 p
 ```
 
 ```{r}
-fill_strips_top(p = p, colors = c("red", "blue", "yellow"))
+fill_strips_right(p = p, colors = c("red", "blue", "yellow"))
 ```
 
