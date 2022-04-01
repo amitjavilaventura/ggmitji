@@ -14,9 +14,14 @@
 #'
 #' @export
 
-theme_ggvenn <- function(title.hjust = .5, title.face = "plain", subtitle.face = "italic",
-                         title.family = "sans", subtitle.family = "sans",
-                         caption.face = "plain", caption.hjust = 1, caption.family = "sans"){
+theme_ggvenn <- function(title.hjust = .5,
+                         title.face = "plain",
+                         subtitle.face = "italic",
+                         title.family = "sans",
+                         subtitle.family = "sans",
+                         caption.face = "plain",
+                         caption.hjust = 1,
+                         caption.family = "sans"){
 
   theme(plot.title = element_text(face = title.face, hjust = title.hjust, family = title.family),
         plot.subtitle = element_text(face = subtitle.face, hjust = title.hjust, family = subtitle.family),

@@ -19,7 +19,12 @@
 #'
 #' @export
 
-stat_info_boxplot <- function(text_size = 2, text_color = "black", width = .5, y = "lower", statistic = "n", label = ""){
+stat_info_boxplot <- function(text_size = 2,
+                              text_color = "black",
+                              width = .5,
+                              y = "lower",
+                              statistic = "n",
+                              label = ""){
 
   # Check and format the inputs.
   if(is.character(y)){ y <- tolower(y) }

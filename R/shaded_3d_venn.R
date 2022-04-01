@@ -13,7 +13,7 @@
 #' @param highlight Character of length 1 to 7. One of c("ABC", "ABnoC", "AnoBC", "noABC", "AnoBnoC", "noABnoC", "noAnoBC") or 'all'. If 'all', highlights all the areas. Default = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoBnoC", "noABnoC", "noAnoBC").
 #' @param color Character of length 1 to 7. The same length as highlight. Colors of the highlighted areas. Default =  c("red", "pink", "blue", "yellow", "green", "orange", "purple").
 #' @param label Character of length 1 or NULL. Label to draw next to the Venn. If NULL, does not write any label. Default = NULL.
-#' @param label.pos Character of length 1. One of c("bottom.right", "right.bottom", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top"). Position of the label if `label` is not NULL. Default = 'bottom.right'
+#' @param label.pos Character of length 1. One of c("bottom.right", "right.bottom", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top"). Position of the label if 'label is not NULL. Default = 'bottom.right'
 #' @param label.face Character of length 1. Fontface of the label. Default = "italic"
 #' @param label.size Numeric of length 1. Size of the label. Default = 13
 #' @param label.col Character of length 1. Color of the label. Default = "black"

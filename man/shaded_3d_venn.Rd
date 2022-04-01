@@ -22,7 +22,7 @@ shaded_3d_venn(
 
 \item{label}{Character of length 1 or NULL. Label to draw next to the Venn. If NULL, does not write any label. Default = NULL.}
 
-\item{label.pos}{Character of length 1. One of c("bottom.right", "right.bottom", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top"). Position of the label if \code{label} is not NULL. Default = 'bottom.right'}
+\item{label.pos}{Character of length 1. One of c("bottom.right", "right.bottom", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top"). Position of the label if 'label is not NULL. Default = 'bottom.right'}
 
 \item{label.face}{Character of length 1. Fontface of the label. Default = "italic"}
 
