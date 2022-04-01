@@ -1,0 +1,12 @@
+Package: ggmitji
+Title: ggmitji: useful functions for ggplot.
+Version: 1.0.0
+Author: Adria Mitjavila Ventura
+Maintainer: Adria Mitjavila Ventura <adria.mitjavila94@gmail.com>
+Description: Helper functions for `ggplot2`-based plots.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
