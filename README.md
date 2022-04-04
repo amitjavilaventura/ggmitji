@@ -6,6 +6,7 @@ Useful custom functions made with or for `ggplot2`.
 
 * `stat_summary_boxplot()`: draws a boxplot without outliers in a ggplot. To calculate mean, do comparisons and other stuff, all points are taken into account (including outliers). 
 * `stat_info_boxplot()`: adds information in a ggplot boxplot about the number observations, mean, median or sd of each group.
+* `stat_point_boxplot()`: draws a point for the mean, median, minimum, maximum or quartile values in a boxplot.
 * `fill_strips_top()`: allows to color the top strips of a ggplot with facets.
 * `fill_strips_right()`: allows to color the right strips of a ggplot with facets.
 * `shaded_2d_venn()`: creates a 2D Venn diagram with the desired highlighted areas.
@@ -37,4 +38,6 @@ If you use this package, please cite [this repository](https://github.com/amitja
 
 ## Versions
 
-* `1.0.0`
+`1.0.0`:
+
+* Initial package. 
