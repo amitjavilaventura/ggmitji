@@ -22,6 +22,12 @@
     <loc>/articles/06-shaded_3d_venn.html</loc>
   </url>
   <url>
+    <loc>/articles/06-stat_point_boxplot.html</loc>
+  </url>
+  <url>
+    <loc>/articles/07-shaded_3d_venn.html</loc>
+  </url>
+  <url>
     <loc>/articles/index.html</loc>
   </url>
   <url>
@@ -47,6 +53,9 @@
   </url>
   <url>
     <loc>/reference/stat_info_boxplot.html</loc>
+  </url>
+  <url>
+    <loc>/reference/stat_point_boxplot.html</loc>
   </url>
   <url>
     <loc>/reference/stat_summary_boxplot.html</loc>

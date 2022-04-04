@@ -1,5 +1,5 @@
 ---
-title: "stat_info_boxplot()"
+title: "stat_summary_boxplot()"
 author: "Adrià Mitjavila Ventura"
 output:
   html_document:
@@ -9,7 +9,7 @@ output:
     self_contained: yes
     mode: selfcontained
 vignette: >
-  %\VignetteIndexEntry{stat_info_boxplot()}
+  %\VignetteIndexEntry{stat_summary_boxplot()}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -35,17 +35,12 @@ library(ggmitji)
 library(patchwork)
 ```
 
-```{r}
-# Create base boxplot with geom_boxplot, stat_boxplot or stat_summary_boxplot
-p <- ggplot(mpg, aes(class, hwy)) + stat_summary_boxplot()
-p
-```
+```{r fig.width=7, fig.height=7}
+p1 <- ggplot(mpg, aes(class, hwy)) + geom_boxplot() + labs(title = "Made with geom_boxplot")
+p2 <- ggplot(mpg, aes(class, hwy)) + stat_boxplot() + labs(title = "Made with stat_boxplot")
+p3 <- ggplot(mpg, aes(class, hwy)) + stat_summary_boxplot() + labs(title = "Made with stat_summry_boxplot")
 
-```{r}
-p + stat_info_boxplot(statistic = "n", label = "N=", y = 10, text_color = "darkblue", text_size = 3) + labs(title = "Boxplots with number of observations")
-p + stat_info_boxplot(statistic = "mean", label = "µ=", y = "min", text_color = "darkred", text_size = 3) + labs(title = "Boxplots with mean of observations")
-p + stat_info_boxplot(statistic = "sd", label = "", y = "lower", text_color = "red", text_size = 3) + labs(title = "Boxplots with st. dev. of observations")
-p + stat_info_boxplot(statistic = "median", label = "", y = "upper", text_color = "darkgreen", text_size = 3) + labs(title = "Boxplots with median of observations")
+(p1 + p2) / p3
 ```
 
 

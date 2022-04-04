@@ -2,7 +2,7 @@
 # theme_ggvenn() #
 # -------------- #
 
-#' @title theme_custom
+#' @title theme_ggvenn
 #' @author amitjavilaventura
 #'
 #' @description

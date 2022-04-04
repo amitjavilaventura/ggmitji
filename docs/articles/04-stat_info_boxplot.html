@@ -5,14 +5,21 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>stat_summary_boxplot() • ggmitji</title>
+<title>stat_info_boxplot() • ggmitji</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="stat_summary_boxplot()">
+<script src="../pkgdown.js"></script><meta property="og:title" content="stat_info_boxplot()">
 <meta property="og:description" content="ggmitji">
+<meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -56,16 +63,19 @@
       <a href="../articles/02-fill_strips_right.html">fill_strips_right()</a>
     </li>
     <li>
-      <a href="../articles/03-stat_summary_boxplot.html">stat_info_boxplot()</a>
+      <a href="../articles/03-stat_summary_boxplot.html">stat_summary_boxplot()</a>
     </li>
     <li>
-      <a href="../articles/04-stat_info_boxplot.html">stat_summary_boxplot()</a>
+      <a href="../articles/04-stat_info_boxplot.html">stat_info_boxplot()</a>
     </li>
     <li>
       <a href="../articles/05-shaded_2d_venn.html">shaded_2d_venn()</a>
     </li>
     <li>
-      <a href="../articles/06-shaded_3d_venn.html">shaded_3d_venn()</a>
+      <a href="../articles/06-stat_point_boxplot.html">stat_point_boxplot()</a>
+    </li>
+    <li>
+      <a href="../articles/07-shaded_3d_venn.html">shaded_3d_venn()</a>
     </li>
   </ul>
 </li>
@@ -90,7 +100,7 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>stat_summary_boxplot()</h1>
+      <h1 data-toc-skip>stat_info_boxplot()</h1>
                         <h4 data-toc-skip class="author">Adrià Mitjavila Ventura</h4>
             
       
@@ -101,7 +111,7 @@
 
     
     
-<p>Last updated: 2022-04-01</p>
+<p>Last updated: 2022-04-04</p>
 <hr>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Load ggplot2</span>
@@ -113,12 +123,22 @@
 <span class="co"># Load patchwork (to put plots together)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com" class="external-link">patchwork</a></span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">class</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Made with geom_boxplot"</span><span class="op">)</span>
-<span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">class</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">stat_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Made with stat_boxplot"</span><span class="op">)</span>
-<span class="va">p3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">class</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_summary_boxplot.html">stat_summary_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Made with stat_summry_boxplot"</span><span class="op">)</span>
-
-<span class="op">(</span><span class="va">p1</span> <span class="op">+</span> <span class="va">p2</span><span class="op">)</span> <span class="op">/</span> <span class="va">p3</span></code></pre></div>
-<p><img src="04-stat_info_boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;"></p>
+<code class="sourceCode R"><span class="co"># Create base boxplot with geom_boxplot, stat_boxplot or stat_summary_boxplot</span>
+<span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">class</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_summary_boxplot.html">stat_summary_boxplot</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">p</span></code></pre></div>
+<p><img src="04-stat_info_boxplot_files/figure-html/unnamed-chunk-2-1.png" width="384" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"n"</span>, label <span class="op">=</span> <span class="st">"N="</span>, y <span class="op">=</span> <span class="fl">10</span>, text_color <span class="op">=</span> <span class="st">"darkblue"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Boxplots with number of observations"</span><span class="op">)</span></code></pre></div>
+<p><img src="04-stat_info_boxplot_files/figure-html/unnamed-chunk-3-1.png" width="384" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"mean"</span>, label <span class="op">=</span> <span class="st">"µ="</span>, y <span class="op">=</span> <span class="st">"min"</span>, text_color <span class="op">=</span> <span class="st">"darkred"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Boxplots with mean of observations"</span><span class="op">)</span></code></pre></div>
+<p><img src="04-stat_info_boxplot_files/figure-html/unnamed-chunk-3-2.png" width="384" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"sd"</span>, label <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">"lower"</span>, text_color <span class="op">=</span> <span class="st">"red"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Boxplots with st. dev. of observations"</span><span class="op">)</span></code></pre></div>
+<p><img src="04-stat_info_boxplot_files/figure-html/unnamed-chunk-3-3.png" width="384" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"median"</span>, label <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">"upper"</span>, text_color <span class="op">=</span> <span class="st">"darkgreen"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Boxplots with median of observations"</span><span class="op">)</span></code></pre></div>
+<p><img src="04-stat_info_boxplot_files/figure-html/unnamed-chunk-3-4.png" width="384" style="display: block; margin: auto;"></p>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -1,14 +1,15 @@
-# `ggmitji` <img src="ggmitji.png" align="right" alt="" width="350" />
+# `ggmitji` <img src="logo.png" align="right" alt="" width="350" />
 
-Package with useful custom functions made with or for `ggplot2`.
+Useful custom functions made with or for `ggplot2`.
 
 ## Functions
 
-* `stat_summary_boxplot`: draws a boxplot without outliers in a ggplot. 
-* `stat_info_boxplot`: adds information in a ggplot boxplot about the number observations, mean, median or sd of each group.
-* `fill_top_strips`: allows to color the top strips of a ggplot with facets.
-* `shaded_2d_venn`: creates a 2D Venn diagram with the desired highlighted areas.
-* `shaded_3d_venn`: creates a 3D Venn diagram with the desired highlighted areas.
+* `stat_summary_boxplot()`: draws a boxplot without outliers in a ggplot. To calculate mean, do comparisons and other stuff, all points are taken into account (including outliers). 
+* `stat_info_boxplot()`: adds information in a ggplot boxplot about the number observations, mean, median or sd of each group.
+* `fill_strips_top()`: allows to color the top strips of a ggplot with facets.
+* `fill_strips_right()`: allows to color the right strips of a ggplot with facets.
+* `shaded_2d_venn()`: creates a 2D Venn diagram with the desired highlighted areas.
+* `shaded_3d_venn()`: creates a 3D Venn diagram with the desired highlighted areas.
 * `theme_custom()`: custom theme for ggplot that allows to customize almost everything from a plot
 * `theme_ggvenn()`: custom them for ggplot-based Venn diagrams, specially designed for plots made with `ggvenn::ggvenn()`. 
 

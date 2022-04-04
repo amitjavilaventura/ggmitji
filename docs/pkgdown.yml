@@ -7,6 +7,7 @@ articles:
   03-stat_summary_boxplot: 03-stat_summary_boxplot.html
   04-stat_info_boxplot: 04-stat_info_boxplot.html
   05-shaded_2d_venn: 05-shaded_2d_venn.html
-  06-shaded_3d_venn: 06-shaded_3d_venn.html
-last_built: 2022-04-01T12:05Z
+  06-stat_point_boxplot: 06-stat_point_boxplot.html
+  07-shaded_3d_venn: 07-shaded_3d_venn.html
+last_built: 2022-04-04T07:52Z
 

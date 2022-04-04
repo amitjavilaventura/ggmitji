@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_ggvenn.R
 \name{theme_ggvenn}
 \alias{theme_ggvenn}
-\title{theme_custom}
+\title{theme_ggvenn}
 \usage{
 theme_ggvenn(
   title.hjust = 0.5,
