@@ -19,6 +19,12 @@
     <loc>/articles/05-shaded_2d_venn.html</loc>
   </url>
   <url>
+    <loc>/articles/05-stat_point_boxplot.html</loc>
+  </url>
+  <url>
+    <loc>/articles/06-shaded_2d_venn.html</loc>
+  </url>
+  <url>
     <loc>/articles/06-shaded_3d_venn.html</loc>
   </url>
   <url>
@@ -28,6 +34,9 @@
     <loc>/articles/07-shaded_3d_venn.html</loc>
   </url>
   <url>
+    <loc>/articles/08-draw_polygon.html</loc>
+  </url>
+  <url>
     <loc>/articles/index.html</loc>
   </url>
   <url>
@@ -35,6 +44,9 @@
   </url>
   <url>
     <loc>/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/draw_polygon.html</loc>
   </url>
   <url>
     <loc>/reference/fill_strips_right.html</loc>

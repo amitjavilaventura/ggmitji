@@ -69,13 +69,16 @@
       <a href="articles/04-stat_info_boxplot.html">stat_info_boxplot()</a>
     </li>
     <li>
-      <a href="articles/05-shaded_2d_venn.html">shaded_2d_venn()</a>
+      <a href="articles/05-stat_point_boxplot.html">stat_point_boxplot()</a>
     </li>
     <li>
-      <a href="articles/06-stat_point_boxplot.html">stat_point_boxplot()</a>
+      <a href="articles/06-shaded_2d_venn.html">shaded_2d_venn()</a>
     </li>
     <li>
       <a href="articles/07-shaded_3d_venn.html">shaded_3d_venn()</a>
+    </li>
+    <li>
+      <a href="articles/08-draw_polygon.html">draw_polygon()</a>
     </li>
   </ul>
 </li>
@@ -123,9 +126,39 @@
 <li>
 <code><a href="reference/shaded_3d_venn.html">shaded_3d_venn()</a></code>: creates a 3D Venn diagram with the desired highlighted areas.</li>
 <li>
+<code><a href="reference/draw_polygon.html">draw_polygon()</a></code>: draws a polygon in several shapes (e.g. square, triangle, L-like…).</li>
+<li>
 <code><a href="reference/theme_custom.html">theme_custom()</a></code>: custom theme for ggplot that allows to customize almost everything from a plot</li>
 <li>
 <code><a href="reference/theme_ggvenn.html">theme_ggvenn()</a></code>: custom them for ggplot-based Venn diagrams, specially designed for plots made with <code><a href="https://rdrr.io/pkg/ggvenn/man/ggvenn.html" class="external-link">ggvenn::ggvenn()</a></code>.</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="requirements">Requirements<a class="anchor" aria-label="anchor" href="#requirements"></a>
+</h2>
+<p><code>ggmitji</code> requires the following R packages:</p>
+<ul>
+<li>
+<code>ggplot2</code> <em>(all functions)</em>
+</li>
+<li>
+<code>magrittr</code> <em>(<code><a href="reference/shaded_2d_venn.html">shaded_2d_venn()</a></code>, <code><a href="reference/shaded_3d_venn.html">shaded_3d_venn()</a></code>)</em>
+</li>
+<li>
+<code>VennDiagram</code> <em>(<code><a href="reference/shaded_2d_venn.html">shaded_2d_venn()</a></code>, <code><a href="reference/shaded_3d_venn.html">shaded_3d_venn()</a></code>)</em>
+</li>
+<li>
+<code>polyclip</code> <em>(<code><a href="reference/shaded_2d_venn.html">shaded_2d_venn()</a></code>, <code><a href="reference/shaded_3d_venn.html">shaded_3d_venn()</a></code>)</em>
+</li>
+<li>
+<code>cowplot</code> <em>(<code><a href="reference/fill_strips_top.html">fill_strips_top()</a></code>, <code><a href="reference/fill_strips_right.html">fill_strips_right()</a></code>,<code><a href="reference/shaded_2d_venn.html">shaded_2d_venn()</a></code>, <code><a href="reference/shaded_3d_venn.html">shaded_3d_venn()</a></code>, <code><a href="reference/draw_polygon.html">draw_polygon()</a></code>)</em>
+</li>
+<li>
+<code>ggforce</code> <em>(<code><a href="reference/draw_polygon.html">draw_polygon()</a></code>)</em>
+</li>
+<li>
+<code>ggpubr</code> <em>(<code><a href="reference/theme_custom.html">theme_custom()</a></code>)</em>
+</li>
 </ul>
 </div>
 <div class="section level2">
@@ -187,7 +220,7 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Adria Mitjavila Ventura <br><small class="roles"> Maintainer </small>  </li>
+<li>Adria Mitjavila-Ventura <br><small class="roles"> Maintainer </small>  </li>
 </ul>
 </div>
 
@@ -199,7 +232,7 @@
 
       <footer><div class="copyright">
   <p></p>
-<p>Developed by Adria Mitjavila Ventura.</p>
+<p>Developed by Adria Mitjavila-Ventura.</p>
 </div>
 
 <div class="pkgdown">

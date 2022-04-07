@@ -1,8 +1,8 @@
 Package: ggmitji
 Title: ggmitji: useful functions for ggplot.
 Version: 1.0.0
-Author: Adria Mitjavila Ventura
-Maintainer: Adria Mitjavila Ventura <adria.mitjavila94@gmail.com>
+Author: Adria Mitjavila-Ventura
+Maintainer: Adria Mitjavila-Ventura <adria.mitjavila94@gmail.com>
 Description: Helper functions for `ggplot2`-based plots.
 License: MIT
 Encoding: UTF-8
