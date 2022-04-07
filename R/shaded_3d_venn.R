@@ -31,7 +31,6 @@ shaded_3d_venn <- function(highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoB
                            line.col = "black"){
 
   # load required packages
-  require(VennDiagram)
   require(polyclip)
   require(magrittr)
   require(ggplot2)
@@ -42,15 +41,19 @@ shaded_3d_venn <- function(highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoB
   if(length(color) != length(highlight)){ stop("'color' must be a character vector with the same length as 'highlight'.") }
   if(!label.pos %in% c("bottom.right", "right.bottom", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top")){ stop("Incorrect value for 'label.pos'.") }
 
-  # Create base venn
-  invisible(vp <- VennDiagram::draw.triple.venn(area1 = 0, area2 = 0, area3 = 0, n12 = 0, n23 = 0, n13 = 0, n123 = 0,
-                                                category = rep("", 3), cex = 0, label.col = NA, scaled = F, fill = NA,
-                                                margin = 0, disable.logging = T))
+  # Define internal function that will create the points of the coordinates for the circles
+  circle_coords <- function(center = c(0,0),diameter = 1, npoints = 100){
+    r = diameter / 2
+    tt <- seq(0,2*pi,length.out = npoints)
+    xx <- center[1] + r * cos(tt)
+    yy <- center[2] + r * sin(tt)
+    return(data.frame(x = xx, y = yy))
+  }
 
-  # Take the circles
-  A <- list(list(x = as.vector(vp[[1]][[1]]), y = as.vector(vp[[1]][[2]])))
-  B <- list(list(x = as.vector(vp[[2]][[1]]), y = as.vector(vp[[2]][[2]])))
-  C <- list(list(x = as.vector(vp[[3]][[1]]), y = as.vector(vp[[3]][[2]])))
+  # Call the function to draw the circles
+  A = circle_coords(center = c(.35, .6), diameter = .65)
+  B = circle_coords(center = c(.65, .6), diameter = .65)
+  C = circle_coords(center = c(.5, .35), diameter = .65)
 
   # Find the intersections and other areas
   AB <- polyclip::polyclip(A,B)

@@ -21,7 +21,6 @@ Useful custom functions made with or for `ggplot2`.
 
 - `ggplot2` *(all functions)*
 - `magrittr` *(`shaded_2d_venn()`, `shaded_3d_venn()`)*
-- `VennDiagram` *(`shaded_2d_venn()`, `shaded_3d_venn()`)*
 - `polyclip` *(`shaded_2d_venn()`, `shaded_3d_venn()`)*
 - `cowplot` *(`fill_strips_top()`, `fill_strips_right()`,`shaded_2d_venn()`, `shaded_3d_venn()`, `draw_polygon()`)*
 - `ggforce` *(`draw_polygon()`)*
@@ -52,6 +51,9 @@ If you use this package, please cite [this repository](https://github.com/amitja
 
 ## Versions
 
-`1.0.0`:
+* `1.0.0`:
+  + Initial package. 
 
-* Initial package. 
+* `1.0.1`:
+  + Add new function: `draw_polygon()`. 
+  + `shaded_*d_venn()`: add internal function to calculate coordinates of circles instead of relying on `VennDiagram`.

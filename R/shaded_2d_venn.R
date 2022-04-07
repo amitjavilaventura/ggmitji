@@ -32,7 +32,6 @@ shaded_2d_venn <- function(highlight = c("AB", "AnoB", "noAB"),
 
   # Load required packages
   require(polyclip)
-  require(VennDiagram)
   require(ggplot2)
   require(cowplot)
 
@@ -43,12 +42,18 @@ shaded_2d_venn <- function(highlight = c("AB", "AnoB", "noAB"),
     stop("Incorrect value for 'label.pos'.")
   }
 
-  # Generate blank venn diagram
-  invisible(vd <- VennDiagram::draw.pairwise.venn(area1 = 2, area2 = 2, cross.area = 1, category = rep("", 2), cex = 0, label.col = NA, scaled = F, fill = NA, margin = 0, disable.logging = T))
+  # Define internal function that will create the points of the coordinates for the circles
+  circle_coords <- function(center = c(0,0),diameter = 1, npoints = 100){
+    r = diameter / 2
+    tt <- seq(0,2*pi,length.out = npoints)
+    xx <- center[1] + r * cos(tt)
+    yy <- center[2] + r * sin(tt)
+    return(data.frame(x = xx, y = yy))
+  }
 
-  # Retrieve coordinates of the circles
-  A <- list(list(x = as.vector(vd[[1]][[1]]), y = as.vector(vd[[1]][[2]])))
-  B <- list(list(x = as.vector(vd[[2]][[1]]), y = as.vector(vd[[2]][[2]])))
+  # Call the function to draw the circles
+  A = circle_coords(center = c(.35, .5), diameter = .6)
+  B = circle_coords(center = c(.65, .5), diameter = .6)
 
   # Find coordinates of intersection
   AB <- polyclip::polyclip(A,B)
