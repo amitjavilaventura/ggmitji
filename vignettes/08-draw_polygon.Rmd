@@ -41,10 +41,13 @@ l = draw_polygon(shape = "L", color = "Black", fill = NA)
 s = draw_polygon(shape = "square", color = "red", fill = "cornflowerblue")
 t = draw_polygon(shape = "triangle", color = "Black", fill = "pink")
 c = draw_polygon(shape = "circle", color = "Black", fill = "yellow")
+d = draw_polygon(shape = "diamond", color = "Black", fill = "red")
+h = draw_polygon(shape = "heart", color = NA, fill = "red")
+
 ```
 
-```{r fig.height=6, fig.width=7}
-(l + s + t + c)
+```{r fig.height=5, fig.width=7}
+(l + s + t + c + h + d)
 ```
 
 

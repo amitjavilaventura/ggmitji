@@ -45,7 +45,7 @@ stat_info_boxplot <- function(text_size = 2,
     else if(is.numeric(y)) { y <- y }
 
     # Remove NAs
-    x <- x %>% na.omit()
+    x <- na.omit(x)
 
     # Define the label with the corresponding statistic
     if(statistic == "n"){ label = paste0(label, length(x), sep = "") }

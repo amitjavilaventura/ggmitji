@@ -20,10 +20,9 @@ Useful custom functions made with or for `ggplot2`.
 `ggmitji` requires the following R packages:
 
 - `ggplot2` *(all functions)*
-- `magrittr` *(`shaded_2d_venn()`, `shaded_3d_venn()`)*
+- `magrittr` *(`shaded_2d_venn()`, `shaded_3d_venn()`)*, for the pipe (`%>%`).
 - `polyclip` *(`shaded_2d_venn()`, `shaded_3d_venn()`)*
-- `cowplot` *(`fill_strips_top()`, `fill_strips_right()`,`shaded_2d_venn()`, `shaded_3d_venn()`, `draw_polygon()`)*
-- `ggforce` *(`draw_polygon()`)*
+- `cowplot` *(`fill_strips_top()`, `fill_strips_right()`)*
 - `ggpubr` *(`theme_custom()`)*
 
 
@@ -54,6 +53,13 @@ If you use this package, please cite [this repository](https://github.com/amitja
 * `1.0.0`:
   + Initial package. 
 
-* `1.0.1`:
+* `1.1.0`:
   + Add new function: `draw_polygon()`. 
   + `shaded_*d_venn()`: add internal function to calculate coordinates of circles instead of relying on `VennDiagram`.
+
+* `2.0.0`:
+  + Add new theme functions: `remove_axis()`, `remove_x_axis()`, `remove_y_axis()`, `add_border()`, `add_grid()`, `ch_panel_bg()`, `ch_plot_bg()`. 
+  + `shaded_*d_venn()`: change `cowplot::theme_nothing()` for `ggplot2::theme_void()`.
+  + `draw_polygon()`: change `cowplot::theme_nothing()` for `ggplot2::theme_void()`.
+  + `draw_polygon()`: add internal function to calculate circle coordinates instead of relying on `ggforce::geom_circle()`.
+  + `draw_polygon()`: add "heart" and "diamond" as new shapes.

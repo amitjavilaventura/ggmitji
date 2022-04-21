@@ -7,7 +7,7 @@
 draw_polygon(shape, color = "black", fill = NA)
 }
 \arguments{
-\item{shape}{Character of length 1. One of c('L', 'square', 'triangle', 'circle').}
+\item{shape}{Character of length 1. One of c('L', 'square', 'triangle', 'circle', "diamond", "heart").}
 
 \item{color}{Character of length 1. Color of the line. Default = "Black".}
 

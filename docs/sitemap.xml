@@ -46,6 +46,18 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/add_border.html</loc>
+  </url>
+  <url>
+    <loc>/reference/add_grid.html</loc>
+  </url>
+  <url>
+    <loc>/reference/ch_panel_bg.html</loc>
+  </url>
+  <url>
+    <loc>/reference/ch_plot_bg.html</loc>
+  </url>
+  <url>
     <loc>/reference/draw_polygon.html</loc>
   </url>
   <url>
@@ -56,6 +68,15 @@
   </url>
   <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/remove_axis.html</loc>
+  </url>
+  <url>
+    <loc>/reference/remove_x_axis.html</loc>
+  </url>
+  <url>
+    <loc>/reference/remove_y_axis.html</loc>
   </url>
   <url>
     <loc>/reference/shaded_2d_venn.html</loc>

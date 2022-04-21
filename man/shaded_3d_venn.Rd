@@ -2,7 +2,7 @@
 % Please edit documentation in R/shaded_3d_venn.R
 \name{shaded_3d_venn}
 \alias{shaded_3d_venn}
-\title{shaded_2d_venn}
+\title{shaded_3d_venn}
 \usage{
 shaded_3d_venn(
   highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoBnoC", "noABnoC", "noAnoBC"),

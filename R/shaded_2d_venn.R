@@ -81,11 +81,11 @@ shaded_2d_venn <- function(highlight = c("AB", "AnoB", "noAB"),
   for(i in 1:length(highlight)){
     set <- highlight[i]
     new_data <- data.frame(set=sets[[set]])
-    venn <- venn + geom_polygon(data = new_data, aes(set.x,set.y), color = "black", fill = color[i], alpha = 1, size = 0.2)
+    venn <- venn + geom_polygon(data = new_data, aes(set.x,set.y), color = "black", fill = color[i], alpha = 1, size = 0.2, show.legend = F)
   }
 
   # Remove all the elements in the plot.
-  venn <- venn + cowplot::theme_nothing()
+  venn <- venn + theme_void()
 
   # Add label if desired
   if(!is.null(label)){

@@ -1,12 +1,12 @@
 Package: ggmitji
-Title: ggmitji: useful functions for ggplot.
-Version: 1.1.0
+Title: Useful functions for ggplot.
+Version: 2.0.0
 Author: Adria Mitjavila-Ventura
 Maintainer: Adria Mitjavila-Ventura <adria.mitjavila94@gmail.com>
-Description: Helper functions for `ggplot2`-based plots.
+Description: Cool functions for `ggplot2`-based plots.
 License: MIT
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-URL: https://amitjavilaventura.github.io/ggmitji/index.html, https://github.com/amitjavilaventura/ggmitji
+URL: https://amitjavilaventura.github.io/ggmitji

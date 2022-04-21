@@ -2,7 +2,7 @@
 # shaded_3d_venn() #
 # ---------------- #
 
-#' @title shaded_2d_venn
+#' @title shaded_3d_venn
 #' @author amitjavilaventura
 #'
 #' @description
@@ -34,7 +34,6 @@ shaded_3d_venn <- function(highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoB
   require(polyclip)
   require(magrittr)
   require(ggplot2)
-  require(cowplot)
 
   # Check that parameters are OK.
   if(!highlight %in% c("all", "ABC", "ABnoC", "AnoBC", "noABC", "AnoBnoC", "noABnoC", "noAnoBC")){ stop("'highlight' must be a character vector with one or many of the intersection names or 'all'. If 'all', the character must be of length 1.") }
@@ -42,7 +41,7 @@ shaded_3d_venn <- function(highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoB
   if(!label.pos %in% c("bottom.right", "right.bottom", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top")){ stop("Incorrect value for 'label.pos'.") }
 
   # Define internal function that will create the points of the coordinates for the circles
-  circle_coords <- function(center = c(0,0),diameter = 1, npoints = 100){
+  circle_coords <- function(center = c(0,0), diameter = 1, npoints = 100){
     r = diameter / 2
     tt <- seq(0,2*pi,length.out = npoints)
     xx <- center[1] + r * cos(tt)
@@ -92,11 +91,11 @@ shaded_3d_venn <- function(highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoB
   for(i in 1:length(highlight)){
     set <- highlight[i]
     new_data <- data.frame(set=sets[[set]])
-    venn <- venn + geom_polygon(data = new_data, aes(set.x,set.y), color = line.col, fill = color[i], alpha = 1, size = 0.2)
+    venn <- venn + geom_polygon(data = new_data, aes(set.x,set.y), color = line.col, fill = color[i], alpha = 1, size = 0.2, show.legend = F)
   }
 
   # Remove all the elements from the grid, axes...
-  venn <- venn + cowplot::theme_nothing()
+  venn <- venn + theme_void()
 
   # Add label if desired
   if(!is.null(label)){
