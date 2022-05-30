@@ -36,7 +36,7 @@ shaded_2d_venn <- function(highlight = c("AB", "AnoB", "noAB"),
   require(cowplot)
 
   # Check that the inputs are OK.
-  if(!highlight %in% c("AB", "AnoB", "noAB", "all")){ stop("'highlight' must be a character vector with one or many of the intersection names or 'all'. If 'all', the character must be of length 1.") }
+  if(!all(highlight %in% c("AB", "AnoB", "noAB", "all"))){ stop("'highlight' must be a character vector with one or many of the intersection names or 'all'. If 'all', the character must be of length 1.") }
   if(length(color) != length(highlight)){ stop("'color' must be a character vector with the same length as 'highlight'.") }
   if(!label.pos %in% c("bottom.right", "right.bottom", "bottom.centre", "centre.bottom", "bottom.center", "center.bottom", "top.centre", "centre.top", "top.center", "center.top", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top")){
     stop("Incorrect value for 'label.pos'.")
@@ -69,7 +69,7 @@ shaded_2d_venn <- function(highlight = c("AB", "AnoB", "noAB"),
   data <- data.frame(A=A, B=B)
 
   # If highlight == "all" set to all clusters
-  if(highlight == "all") { highlight <- names(sets); color <- rep(color, 7)}
+  if(all(highlight == "all")) { highlight <- names(sets); color <- rep(color, 7)}
 
 
   # Start ggplot with the blank venn diagram

@@ -1,5 +1,5 @@
 pandoc: 2.11.4
-pkgdown: 2.0.2
+pkgdown: 2.0.3
 pkgdown_sha: ~
 articles:
   01-fill_strips_top: 01-fill_strips_top.html
@@ -10,5 +10,5 @@ articles:
   06-shaded_2d_venn: 06-shaded_2d_venn.html
   07-shaded_3d_venn: 07-shaded_3d_venn.html
   08-draw_polygon: 08-draw_polygon.html
-last_built: 2022-04-21T09:12Z
+last_built: 2022-05-30T15:25Z
 

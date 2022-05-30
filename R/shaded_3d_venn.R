@@ -36,7 +36,7 @@ shaded_3d_venn <- function(highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoB
   require(ggplot2)
 
   # Check that parameters are OK.
-  if(!highlight %in% c("all", "ABC", "ABnoC", "AnoBC", "noABC", "AnoBnoC", "noABnoC", "noAnoBC")){ stop("'highlight' must be a character vector with one or many of the intersection names or 'all'. If 'all', the character must be of length 1.") }
+  if(!all(highlight %in% c("all", "ABC", "ABnoC", "AnoBC", "noABC", "AnoBnoC", "noABnoC", "noAnoBC"))){ stop("'highlight' must be a character vector with one or many of the intersection names or 'all'. If 'all', the character must be of length 1.") }
   if(length(color) != length(highlight)){ stop("'color' must be a character vector with the same length as 'highlight'.") }
   if(!label.pos %in% c("bottom.right", "right.bottom", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top")){ stop("Incorrect value for 'label.pos'.") }
 
@@ -76,7 +76,7 @@ shaded_3d_venn <- function(highlight = c("ABC", "ABnoC", "AnoBC", "noABC", "AnoB
   sets <- list("ABC" = ABC, "ABnoC" = ABnoC, "AnoBC" = AnoBC, "noABC" = noABC, "AnoBnoC" = AnoBnoC, "noABnoC" = noABnoC, "noAnoBC" = noAnoBC)
 
   # If highlight == "all" set to all clusters
-  if(highlight == "all") { highlight <- names(sets); color <- rep(color, 7)}
+  if(all(highlight == "all")) { highlight <- names(sets); color <- rep(color, 7)}
 
   # Write a dataframe with the data from each circle
   data <- data.frame(A=A, B=B, C=C)

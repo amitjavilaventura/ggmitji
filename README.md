@@ -13,7 +13,14 @@ Useful custom functions made with or for `ggplot2`.
 * `shaded_3d_venn()`: creates a 3D Venn diagram with the desired highlighted areas.
 * `draw_polygon()`: draws a polygon in several shapes (e.g. square, triangle, L-like...).
 * `theme_custom()`: custom theme for ggplot that allows to customize almost everything from a plot
-* `theme_ggvenn()`: custom them for ggplot-based Venn diagrams, specially designed for plots made with `ggvenn::ggvenn()`. 
+* `theme_ggvenn()`: custom theme for ggplot-based Venn diagrams, specially designed for plots made with `ggvenn::ggvenn()`. 
+* `remove_axis()`: remove the axes of a ggplot.
+* `remove_x_axis()`: remove the X axis of a ggplot.
+* `remove_y_axis()`: remove the Y axis of a ggplot.
+* `add_border()`: adds a border around the plot area of a ggplot.
+* `add_grid()`: adds the grid in the plot area of a ggplot.
+* `ch_panel_bg()`: changes the panel background of a ggplot.
+* `ch_plot_bg()`: changes the plot background of a ggplot.
 
 ## Requirements
 
@@ -24,7 +31,6 @@ Useful custom functions made with or for `ggplot2`.
 - `polyclip` *(`shaded_2d_venn()`, `shaded_3d_venn()`)*
 - `cowplot` *(`fill_strips_top()`, `fill_strips_right()`)*
 - `ggpubr` *(`theme_custom()`)*
-
 
 ## Install `ggmitji` 
 
@@ -63,3 +69,6 @@ If you use this package, please cite [this repository](https://github.com/amitja
   + `draw_polygon()`: change `cowplot::theme_nothing()` for `ggplot2::theme_void()`.
   + `draw_polygon()`: add internal function to calculate circle coordinates instead of relying on `ggforce::geom_circle()`.
   + `draw_polygon()`: add "heart" and "diamond" as new shapes.
+  
+* `2.0.1`:
+  + `shaded_*d_venn()`: fix a bug that didn't allow to paint more than one area.
