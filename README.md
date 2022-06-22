@@ -21,6 +21,12 @@ Useful custom functions made with or for `ggplot2`.
 * `add_grid()`: adds the grid in the plot area of a ggplot.
 * `ch_panel_bg()`: changes the panel background of a ggplot.
 * `ch_plot_bg()`: changes the plot background of a ggplot.
+* `rm_strips()`: remove strips of a facetted ggplot.
+* `rm_strips_x()`: remove strips from the X axis of a facetted ggplot.
+* `rm_strips_y()`: remove strips from the Y axis of a facetted ggplot.
+* `ch_strips()`: customize strips from a facetted ggplot.
+* `ch_strips_x()`: customize strips from the X axis of a facetted ggplot.
+* `ch_strips_y()`: customize strips from the Y axis of a facetted ggplot.
 
 ## Requirements
 
@@ -72,3 +78,6 @@ If you use this package, please cite [this repository](https://github.com/amitja
   
 * `2.0.1`:
   + `shaded_*d_venn()`: fix a bug that didn't allow to paint more than one area.
+
+* `3.0.0`:
+  + Add new functions to customize the strips of a facetted ggplot: `rm_strips()`, `rm_strips_x()`, `rm_strips_y()`, `ch_strips()`, `ch_strips_x()`, `ch_strips_y()`.

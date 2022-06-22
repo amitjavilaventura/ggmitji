@@ -58,6 +58,9 @@
     <loc>/reference/ch_plot_bg.html</loc>
   </url>
   <url>
+    <loc>/reference/ch_strips.html</loc>
+  </url>
+  <url>
     <loc>/reference/draw_polygon.html</loc>
   </url>
   <url>
@@ -77,6 +80,9 @@
   </url>
   <url>
     <loc>/reference/remove_y_axis.html</loc>
+  </url>
+  <url>
+    <loc>/reference/rm_strips.html</loc>
   </url>
   <url>
     <loc>/reference/shaded_2d_venn.html</loc>

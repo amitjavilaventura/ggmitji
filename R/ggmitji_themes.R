@@ -237,3 +237,143 @@ ch_plot_bg <- function(fill = NA,
   else { t <- theme(plot.background = element_rect(fill = fill)) }
   t
 }
+
+# ----------------- #
+# rm_strips()       #
+# ----------------- #
+
+#' @title rm_strips
+#' @author amitjavilaventura
+#'
+#' @description
+#' Removes the strips of plot facets.
+#'
+#' @seealso `ggplot2::theme()`
+#'
+#' @export
+
+rm_strips <- function() { theme(strip.background = element_blank(), strip.text = element_blank()) }
+
+# ----------------- #
+# rm_strips_x()     #
+# ----------------- #
+
+#' @title rm_strips_x
+#' @author amitjavilaventura
+#'
+#' @description
+#' Removes the strips of plot facets (only X axis).
+#'
+#' @seealso `ggplot2::theme()`
+#'
+#' @export
+#' @rdname rm_strips
+rm_strips_x <- function() { theme(strip.background.x = element_blank(), strip.text.x = element_blank()) }
+
+# ----------------- #
+# rm_strips_y()     #
+# ----------------- #
+
+#' @title rm_strips_y
+#' @author amitjavilaventura
+#'
+#' @description
+#' Removes the strips of plot facets (only Y axis).
+#'
+#' @seealso `ggplot2::theme()`
+#'
+#' @export
+#' @rdname rm_strips
+rm_strips_y <- function() { theme(strip.background.y = element_blank(), strip.text.y = element_blank()) }
+
+# ----------------- #
+# ch_strips()       #
+# ----------------- #
+
+#' @title ch_strips
+#' @author amitjavilaventura
+#'
+#' @description
+#' Change the theme of the strips
+#'
+#' @param bg_fill Character of length 1. Color of the background of the strip. Default = "white"
+#' @param bg_color Character of length 1. Color of the line of the strip. Default = "black"
+#' @param bg_linetype Character of length 1. Line type of the outer line of the strip. Default = "solid"
+#' @param text_face Character of length 1. Face of the strip text. Default = "plain"
+#' @param text_color Character of length 1. Color of the strip text. Default = "black"
+#' @param text_size Numeric of length 1. Size of the strip text. Default = 9
+#'
+#' @seealso `ggplot2::theme()`
+#'
+#' @export
+ch_strips <- function(bg_fill     = "white",
+                      bg_color    = "black",
+                      bg_linetype = "solid",
+                      text_face   = "plain",
+                      text_color  = "black",
+                      text_size   = 9) {
+  theme(strip.background = element_rect(fill = bg_fill, colour = bg_color, linetype = bg_linetype),
+        strip.text       = element_text(face = text_face, colour = text_color, size = text_size))
+}
+
+# ----------------- #
+# ch_strips_x()     #
+# ----------------- #
+
+#' @title ch_strips_x
+#' @author amitjavilaventura
+#'
+#' @description
+#' Change the theme of the strips (only X axis strips).
+#'
+#' @param bg_fill Character of length 1. Color of the background of the strip. Default = "white"
+#' @param bg_color Character of length 1. Color of the line of the strip. Default = "black"
+#' @param bg_linetype Character of length 1. Line type of the outer line of the strip. Default = "solid"
+#' @param text_face Character of length 1. Face of the strip text. Default = "plain"
+#' @param text_color Character of length 1. Color of the strip text. Default = "black"
+#' @param text_size Numeric of length 1. Size of the strip text. Default = 9
+#'
+#' @seealso `ggplot2::theme()`
+#'
+#' @export
+#' @rdname ch_strips
+ch_strips_x <- function(bg_fill     = "white",
+                        bg_color    = "black",
+                        bg_linetype = "solid",
+                        text_face   = "plain",
+                        text_color  = "black",
+                        text_size   = 9) {
+  theme(strip.background.x = element_rect(fill = bg_fill, colour = bg_color, linetype = bg_linetype),
+        strip.text.x       = element_text(face = text_face, colour = text_color, size = text_size))
+}
+
+# ----------------- #
+# ch_strips_y()     #
+# ----------------- #
+
+#' @title ch_strips_y
+#' @author amitjavilaventura
+#'
+#' @description
+#' Change the theme of the strips (only Y axis strips).
+#'
+#' @param bg_fill Character of length 1. Color of the background of the strip. Default = "white"
+#' @param bg_color Character of length 1. Color of the line of the strip. Default = "black"
+#' @param bg_linetype Character of length 1. Line type of the outer line of the strip. Default = "solid"
+#' @param text_face Character of length 1. Face of the strip text. Default = "plain"
+#' @param text_color Character of length 1. Color of the strip text. Default = "black"
+#' @param text_size Numeric of length 1. Size of the strip text. Default = 9
+#'
+#' @seealso `ggplot2::theme()`
+#'
+#' @export
+#' @rdname ch_strips
+ch_strips_y <- function(bg_fill     = "white",
+                        bg_color    = "black",
+                        bg_linetype = "solid",
+                        text_face   = "plain",
+                        text_color  = "black",
+                        text_size   = 9) {
+  theme(strip.background.y = element_rect(fill = bg_fill, colour = bg_color, linetype = bg_linetype),
+        strip.text.y       = element_text(face = text_face, colour = text_color, size = text_size))
+}
