@@ -76,29 +76,29 @@
 
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">stat_info_boxplot</span><span class="op">(</span>
+  statistic <span class="op">=</span> <span class="st">"n"</span>,
+  label <span class="op">=</span> <span class="st">""</span>,
+  y <span class="op">=</span> <span class="fl">0</span>,
   text_size <span class="op">=</span> <span class="fl">2</span>,
   text_color <span class="op">=</span> <span class="st">"black"</span>,
-  width <span class="op">=</span> <span class="fl">0.5</span>,
-  y <span class="op">=</span> <span class="st">"lower"</span>,
-  statistic <span class="op">=</span> <span class="st">"n"</span>,
-  label <span class="op">=</span> <span class="st">""</span>
+  width <span class="op">=</span> <span class="fl">0.5</span>
 <span class="op">)</span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>text_size</dt>
+    <dl><dt>statistic</dt>
+<dd><p>Character of length 1. One of c("n", "mean", "median", "sd", 'sum'). Default = "n".</p></dd>
+<dt>label</dt>
+<dd><p>Character of length 1. The label to show with the statistic, e.g. "N=". Default = "".</p></dd>
+<dt>y</dt>
+<dd><p>Character or numeric of length 1. If character, one of c("upper", "lower", "min", "max", "q1", "q2", "median", "q3"). If numeric, the Y coordinates of the label. Default = 0.</p></dd>
+<dt>text_size</dt>
 <dd><p>Numeric of length 1. Size of the label.</p></dd>
 <dt>text_color</dt>
 <dd><p>Character of length 1. Color of the label.</p></dd>
 <dt>width</dt>
 <dd><p>Numeric of length 1. Passed through poistion_dodge(width=width).</p></dd>
-<dt>y</dt>
-<dd><p>Character or numeric of length 1. If character, one of c("upper", "lower", "min", "max", "q1", "q2", "median", "q3"). If numeric, the Y coordinates of the label.</p></dd>
-<dt>statistic</dt>
-<dd><p>Character of length 1. One of c("n", "mean", "median", "sd"). Default = "n".</p></dd>
-<dt>label</dt>
-<dd><p>Character of length 1. The label to show with the statistic, e.g. "N=". Default = "".</p></dd>
 </dl></div>
     <div id="see-also">
     <h2>See also</h2>

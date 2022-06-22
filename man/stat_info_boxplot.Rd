@@ -5,26 +5,26 @@
 \title{stat_info_boxplot}
 \usage{
 stat_info_boxplot(
+  statistic = "n",
+  label = "",
+  y = 0,
   text_size = 2,
   text_color = "black",
-  width = 0.5,
-  y = "lower",
-  statistic = "n",
-  label = ""
+  width = 0.5
 )
 }
 \arguments{
+\item{statistic}{Character of length 1. One of c("n", "mean", "median", "sd", 'sum'). Default = "n".}
+
+\item{label}{Character of length 1. The label to show with the statistic, e.g. "N=". Default = "".}
+
+\item{y}{Character or numeric of length 1. If character, one of c("upper", "lower", "min", "max", "q1", "q2", "median", "q3"). If numeric, the Y coordinates of the label. Default = 0.}
+
 \item{text_size}{Numeric of length 1. Size of the label.}
 
 \item{text_color}{Character of length 1. Color of the label.}
 
 \item{width}{Numeric of length 1. Passed through poistion_dodge(width=width).}
-
-\item{y}{Character or numeric of length 1. If character, one of c("upper", "lower", "min", "max", "q1", "q2", "median", "q3"). If numeric, the Y coordinates of the label.}
-
-\item{statistic}{Character of length 1. One of c("n", "mean", "median", "sd"). Default = "n".}
-
-\item{label}{Character of length 1. The label to show with the statistic, e.g. "N=". Default = "".}
 }
 \description{
 Adds information in a boxplot about the number, mean, median or standard deviation for each group

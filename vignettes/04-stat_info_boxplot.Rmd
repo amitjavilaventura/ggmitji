@@ -38,14 +38,17 @@ library(patchwork)
 ```{r}
 # Create base boxplot with geom_boxplot, stat_boxplot or stat_summary_boxplot
 p <- ggplot(mpg, aes(class, hwy)) + stat_summary_boxplot()
-p
+p + labs(title = "Normal boxplot")
 ```
 
-```{r}
-p + stat_info_boxplot(statistic = "n", label = "N=", y = 10, text_color = "darkblue", text_size = 3) + labs(title = "Boxplots with number of observations")
-p + stat_info_boxplot(statistic = "mean", label = "µ=", y = "min", text_color = "darkred", text_size = 3) + labs(title = "Boxplots with mean of observations")
-p + stat_info_boxplot(statistic = "sd", label = "", y = "lower", text_color = "red", text_size = 3) + labs(title = "Boxplots with st. dev. of observations")
-p + stat_info_boxplot(statistic = "median", label = "", y = "upper", text_color = "darkgreen", text_size = 3) + labs(title = "Boxplots with median of observations")
+```{r, fig.width=7, fig.height=10}
+p + stat_info_boxplot(statistic = "n", label = "N=", y = 10, text_color = "darkblue", text_size = 3) + labs(title = "Number of observations") +
+p + stat_info_boxplot(statistic = "mean", label = "µ=", y = "min", text_color = "darkred", text_size = 3) + labs(title = "Mean of observations") +
+p + stat_info_boxplot(statistic = "sd", label = "", y = "lower", text_color = "red", text_size = 3) + labs(title = "St. dev. of observations") +
+p + stat_info_boxplot(statistic = "median", label = "", y = "upper", text_color = "darkgreen", text_size = 3) + labs(title = "Median of observations") +
+p + stat_info_boxplot(statistic = "sum", label = "", y = 0, text_color = "black", text_size = 4) + labs(title = "Sum of observations") +
+  
+  patchwork::plot_layout(ncol = 2, nrow = 3)
 ```
 
 
