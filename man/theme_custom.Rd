@@ -33,7 +33,9 @@ theme_custom(
   vgrid.major = 0,
   vgrid.minor = 0,
   grid.color = "gray50",
-  grid.type = "dashed"
+  grid.type = "dashed",
+  strip.text.size = 9,
+  strip.text.face = "plain"
 )
 }
 \description{
