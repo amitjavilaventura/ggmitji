@@ -52,7 +52,7 @@ stat_info_boxplot <- function(statistic = "n",
     else if(statistic == "mean"){ label = paste0(label, round(mean(x), digits = 2), sep = "")}
     else if(statistic == "median"){ label = paste0(label, round(median(x), digits = 2), sep = "")}
     else if(statistic == "sd"){ label = paste0(label, round(sd(x), digits = 2), sep = "")}
-    else if(statistic == "sum"){ label = paste0(label, sum(x), sep = "")}
+    else if(statistic == "sum"){ label = paste0(label, round(sum(x), digits = 2), sep = "")}
 
     # Create the dataframe with the values
     n <- data.frame(y = y, label = label)
