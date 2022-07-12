@@ -22,14 +22,14 @@
 stat_info_boxplot <- function(statistic = "n",
                               label = "",
                               y = 0,
-                              text_size = 2,
+                              text_size = 3,
                               text_color = "black",
                               width = .5){
 
   # Check and format the inputs.
   if(is.character(y)){ y <- tolower(y) }
   if(is.character(statistic)){ statistic <- tolower(statistic) }
-  else { stop("'statistic' must be one of 'n', 'mean', 'median', 'sd', 'sum' ") }
+  else if(!statistic %in% c('n', 'mean', 'median', 'sd', 'sum', 'min', 'max')) { stop("'statistic' must be one of 'n', 'mean', 'median', 'sd', 'sum', 'min', 'max'.") }
 
   # Define internal function to calculate the Y, and define the label.
   calc_info_boxplot <- function(x){
@@ -53,6 +53,8 @@ stat_info_boxplot <- function(statistic = "n",
     else if(statistic == "median"){ label = paste0(label, round(median(x), digits = 2), sep = "")}
     else if(statistic == "sd"){ label = paste0(label, round(sd(x), digits = 2), sep = "")}
     else if(statistic == "sum"){ label = paste0(label, round(sum(x), digits = 2), sep = "")}
+    else if(statistic == "min"){ label = paste0(label, round(min(x), digits = 2), sep = "")}
+    else if(statistic == "max"){ label = paste0(label, round(max(x), digits = 2), sep = "")}
 
     # Create the dataframe with the values
     n <- data.frame(y = y, label = label)
