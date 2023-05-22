@@ -4,6 +4,9 @@
     <loc>/404.html</loc>
   </url>
   <url>
+    <loc>/articles/01-fill_strips.html</loc>
+  </url>
+  <url>
     <loc>/articles/01-fill_strips_top.html</loc>
   </url>
   <url>
@@ -62,6 +65,15 @@
   </url>
   <url>
     <loc>/reference/draw_polygon.html</loc>
+  </url>
+  <url>
+    <loc>/reference/fill_strips.html</loc>
+  </url>
+  <url>
+    <loc>/reference/fill_strips_bottom.html</loc>
+  </url>
+  <url>
+    <loc>/reference/fill_strips_left.html</loc>
   </url>
   <url>
     <loc>/reference/fill_strips_right.html</loc>

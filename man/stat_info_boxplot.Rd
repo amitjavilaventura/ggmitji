@@ -8,7 +8,7 @@ stat_info_boxplot(
   statistic = "n",
   label = "",
   y = 0,
-  text_size = 2,
+  text_size = 3,
   text_color = "black",
   width = 0.5
 )

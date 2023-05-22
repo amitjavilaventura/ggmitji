@@ -82,3 +82,6 @@ If you use this package, please cite [this repository](https://github.com/amitja
 * `3.0.0`:
   + Add new functions to customize the strips of a facetted ggplot: `rm_strips()`, `rm_strips_x()`, `rm_strips_y()`, `ch_strips()`, `ch_strips_x()`, `ch_strips_y()`.
   + `stat_info_boxplot()`: add option to write the sum of the observations.
+  
+* `3.0.1`:
+  + Add new `fill_strips*()` functions.

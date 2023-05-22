@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ggmitji</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.1.0</span>
       </span>
     </div>
 
@@ -57,10 +57,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/01-fill_strips_top.html">fill_strips_top()</a>
-    </li>
-    <li>
-      <a href="../articles/02-fill_strips_right.html">fill_strips_right()</a>
+      <a href="../articles/01-fill_strips.html">fill_strips_top()</a>
     </li>
     <li>
       <a href="../articles/03-stat_summary_boxplot.html">stat_summary_boxplot()</a>
@@ -97,7 +94,8 @@
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>stat_info_boxplot()</h1>
-                        <h4 data-toc-skip class="author">Adrià Mitjavila Ventura</h4>
+                        <h4 data-toc-skip class="author">Adrià Mitjavila
+Ventura</h4>
             
       
       
@@ -107,30 +105,30 @@
 
     
     
-<p>Last updated: 2022-06-22</p>
+<p>Last updated: 2023-05-22</p>
 <hr>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Load ggplot2</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
-
-<span class="co"># Load ggmitji </span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://amitjavilaventura.github.io/ggmitji" class="external-link">ggmitji</a></span><span class="op">)</span>
-
-<span class="co"># Load patchwork (to put plots together)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com" class="external-link">patchwork</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Load ggplot2</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Load ggmitji </span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://amitjavilaventura.github.io/ggmitji" class="external-link">ggmitji</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Load patchwork (to put plots together)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com" class="external-link">patchwork</a></span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Create base boxplot with geom_boxplot, stat_boxplot or stat_summary_boxplot</span>
-<span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">class</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_summary_boxplot.html">stat_summary_boxplot</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Normal boxplot"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Create base boxplot with geom_boxplot, stat_boxplot or stat_summary_boxplot</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">class</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_summary_boxplot.html">stat_summary_boxplot</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Normal boxplot"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="04-stat_info_boxplot_files/figure-html/unnamed-chunk-2-1.png" width="384" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"n"</span>, label <span class="op">=</span> <span class="st">"N="</span>, y <span class="op">=</span> <span class="fl">10</span>, text_color <span class="op">=</span> <span class="st">"darkblue"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Number of observations"</span><span class="op">)</span> <span class="op">+</span>
-<span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"mean"</span>, label <span class="op">=</span> <span class="st">"µ="</span>, y <span class="op">=</span> <span class="st">"min"</span>, text_color <span class="op">=</span> <span class="st">"darkred"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Mean of observations"</span><span class="op">)</span> <span class="op">+</span>
-<span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"sd"</span>, label <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">"lower"</span>, text_color <span class="op">=</span> <span class="st">"red"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"St. dev. of observations"</span><span class="op">)</span> <span class="op">+</span>
-<span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"median"</span>, label <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">"upper"</span>, text_color <span class="op">=</span> <span class="st">"darkgreen"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Median of observations"</span><span class="op">)</span> <span class="op">+</span>
-<span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"sum"</span>, label <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="fl">0</span>, text_color <span class="op">=</span> <span class="st">"black"</span>, text_size <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Sum of observations"</span><span class="op">)</span> <span class="op">+</span>
-  
-  <span class="fu">patchwork</span><span class="fu">::</span><span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_layout.html" class="external-link">plot_layout</a></span><span class="op">(</span>ncol <span class="op">=</span> <span class="fl">2</span>, nrow <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"n"</span>, label <span class="op">=</span> <span class="st">"N="</span>, y <span class="op">=</span> <span class="fl">10</span>, text_color <span class="op">=</span> <span class="st">"darkblue"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Number of observations"</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"mean"</span>, label <span class="op">=</span> <span class="st">"µ="</span>, y <span class="op">=</span> <span class="st">"min"</span>, text_color <span class="op">=</span> <span class="st">"darkred"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Mean of observations"</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"sd"</span>, label <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">"lower"</span>, text_color <span class="op">=</span> <span class="st">"red"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"St. dev. of observations"</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"median"</span>, label <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">"upper"</span>, text_color <span class="op">=</span> <span class="st">"darkgreen"</span>, text_size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Median of observations"</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="../reference/stat_info_boxplot.html">stat_info_boxplot</a></span><span class="op">(</span>statistic <span class="op">=</span> <span class="st">"sum"</span>, label <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="fl">0</span>, text_color <span class="op">=</span> <span class="st">"black"</span>, text_size <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Sum of observations"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="fu">patchwork</span><span class="fu">::</span><span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_layout.html" class="external-link">plot_layout</a></span><span class="op">(</span>ncol <span class="op">=</span> <span class="fl">2</span>, nrow <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <p><img src="04-stat_info_boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;"></p>
   </div>
 
@@ -149,7 +147,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

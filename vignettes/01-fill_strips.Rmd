@@ -1,0 +1,121 @@
+---
+title: "fill_strips_top()"
+author: "Adrià Mitjavila Ventura"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    self_contained: yes
+    mode: selfcontained
+vignette: >
+  %\VignetteIndexEntry{fill_strips_top()}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center", fig.width = 4, fig.height = 4, 
+                      warning = FALSE, error = FALSE, message = FALSE)
+devtools::load_all("..")
+```
+
+Last updated: `r Sys.Date()`
+
+***
+
+```{r}
+# Load ggplot2
+library(ggplot2)
+
+# Load ggmitji 
+library(ggmitji)
+```
+
+## Fill top strips
+
+```{r}
+# Example plot from https://ggplot2.tidyverse.org/reference/facet_grid.html
+p <- ggplot(mpg, aes(displ, cty)) + geom_point()
+p <- p + facet_grid(cols = vars(drv))
+p
+```
+
+```{r}
+fill_strips_top(p = p, colors = c("red", "blue", "yellow"))
+```
+
+## Fill right strips
+
+```{r}
+# Example plot from https://ggplot2.tidyverse.org/reference/facet_grid.html
+p <- ggplot(mpg, aes(displ, cty)) + geom_point()
+p <- p + facet_grid(rows = vars(drv))
+p
+```
+
+```{r}
+fill_strips_right(p = p, colors = c("red", "blue", "yellow"))
+```
+
+## Fill bottom strips
+
+```{r}
+# Example plot from https://ggplot2.tidyverse.org/reference/facet_grid.html
+p <- ggplot(mpg, aes(displ, cty)) + geom_point()
+p <- p + facet_grid(cols = vars(drv), switch = "x")
+p
+```
+
+```{r}
+fill_strips_bottom(p = p, colors = c("red", "blue", "yellow"))
+```
+
+
+## Fill left strips
+
+```{r}
+# Example plot from https://ggplot2.tidyverse.org/reference/facet_grid.html
+p <- ggplot(mpg, aes(displ, cty)) + geom_point()
+p <- p + facet_grid(rows = vars(drv), switch = "y")
+p
+```
+
+```{r}
+fill_strips_left(p = p, colors = c("red", "blue", "yellow"))
+```
+
+## Fill all strips
+
+### Top and right strips
+
+```{r}
+# Example plot from https://ggplot2.tidyverse.org/reference/facet_grid.html
+p <- ggplot(mpg, aes(displ, cty)) + geom_point()
+p <- p + facet_grid(rows = vars(drv), cols=vars(fl))
+p
+```
+
+```{r}
+# first the top strips and then the right strips
+fill_strips(p = p, side = c("top", "right"), 
+            colors = c("gray10","gray30", "gray50","gray70","gray90", 
+                       "red", "blue", "yellow"))
+```
+
+### Bottom and left strips
+
+```{r}
+# Example plot from https://ggplot2.tidyverse.org/reference/facet_grid.html
+p <- ggplot(mpg, aes(displ, cty)) + geom_point()
+p <- p + facet_grid(rows = vars(drv), cols=vars(fl), switch = "both")
+p
+```
+
+```{r}
+# first the bottom strips and then the left strips
+fill_strips(p = p, side = c("bottom", "left"), 
+            colors = c("gray10","gray30", "gray50","gray70","gray90", 
+                       "red", "blue", "yellow"))
+```
+

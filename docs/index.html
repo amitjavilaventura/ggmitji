@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">ggmitji</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.1.0</span>
       </span>
     </div>
 
@@ -57,10 +57,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="articles/01-fill_strips_top.html">fill_strips_top()</a>
-    </li>
-    <li>
-      <a href="articles/02-fill_strips_right.html">fill_strips_right()</a>
+      <a href="articles/01-fill_strips.html">fill_strips_top()</a>
     </li>
     <li>
       <a href="articles/03-stat_summary_boxplot.html">stat_summary_boxplot()</a>
@@ -178,11 +175,11 @@
 <a class="anchor" aria-label="anchor" href="#install-ggmitji"></a>
 </h2>
 <p>To install <code>ggmitji</code> you have to run the following command in R:</p>
-<pre><code><span class="co"># if not installed, install the devtools package from CRAN </span>
-<span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span> <span class="op">}</span>
-
-<span class="co"># install ggmitji from this Github repository </span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"amitjavilaventura/ggmitji"</span><span class="op">)</span></code></pre>
+<pre><code><span><span class="co"># if not installed, install the devtools package from CRAN </span></span>
+<span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span> <span class="op">}</span></span>
+<span></span>
+<span><span class="co"># install ggmitji from this Github repository </span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"amitjavilaventura/ggmitji"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="contributors">Contributors<a class="anchor" aria-label="anchor" href="#contributors"></a>
@@ -200,17 +197,22 @@
 </h2>
 <ul>
 <li>
-<code>1.0.0</code>:<ul><li>Initial package.</li></ul>
+<code>1.0.0</code>:
+<ul>
+<li>Initial package.</li>
+</ul>
 </li>
 <li>
-<code>1.1.0</code>:<ul>
+<code>1.1.0</code>:
+<ul>
 <li>Add new function: <code><a href="reference/draw_polygon.html">draw_polygon()</a></code>.</li>
 <li>
 <code>shaded_*d_venn()</code>: add internal function to calculate coordinates of circles instead of relying on <code>VennDiagram</code>.</li>
 </ul>
 </li>
 <li>
-<code>2.0.0</code>:<ul>
+<code>2.0.0</code>:
+<ul>
 <li>Add new theme functions: <code><a href="reference/remove_axis.html">remove_axis()</a></code>, <code><a href="reference/remove_x_axis.html">remove_x_axis()</a></code>, <code><a href="reference/remove_y_axis.html">remove_y_axis()</a></code>, <code><a href="reference/add_border.html">add_border()</a></code>, <code><a href="reference/add_grid.html">add_grid()</a></code>, <code><a href="reference/ch_panel_bg.html">ch_panel_bg()</a></code>, <code><a href="reference/ch_plot_bg.html">ch_plot_bg()</a></code>.</li>
 <li>
 <code>shaded_*d_venn()</code>: change <code><a href="https://wilkelab.org/cowplot/reference/theme_nothing.html" class="external-link">cowplot::theme_nothing()</a></code> for <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">ggplot2::theme_void()</a></code>.</li>
@@ -223,14 +225,24 @@
 </ul>
 </li>
 <li>
-<code>2.0.1</code>:<ul><li>
-<code>shaded_*d_venn()</code>: fix a bug that didn’t allow to paint more than one area.</li></ul>
+<code>2.0.1</code>:
+<ul>
+<li>
+<code>shaded_*d_venn()</code>: fix a bug that didn’t allow to paint more than one area.</li>
+</ul>
 </li>
 <li>
-<code>3.0.0</code>:<ul>
+<code>3.0.0</code>:
+<ul>
 <li>Add new functions to customize the strips of a facetted ggplot: <code><a href="reference/rm_strips.html">rm_strips()</a></code>, <code><a href="reference/rm_strips.html">rm_strips_x()</a></code>, <code><a href="reference/rm_strips.html">rm_strips_y()</a></code>, <code><a href="reference/ch_strips.html">ch_strips()</a></code>, <code><a href="reference/ch_strips.html">ch_strips_x()</a></code>, <code><a href="reference/ch_strips.html">ch_strips_y()</a></code>.</li>
 <li>
 <code><a href="reference/stat_info_boxplot.html">stat_info_boxplot()</a></code>: add option to write the sum of the observations.</li>
+</ul>
+</li>
+<li>
+<code>3.0.1</code>:
+<ul>
+<li>Add new <code>fill_strips*()</code> functions.</li>
 </ul>
 </li>
 </ul>
@@ -274,7 +286,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

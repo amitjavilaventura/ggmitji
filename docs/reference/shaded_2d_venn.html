@@ -19,7 +19,7 @@ It is useful to inidcate that the data from a figure comes from an intersection.
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ggmitji</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.1.0</span>
       </span>
     </div>
 
@@ -34,10 +34,7 @@ It is useful to inidcate that the data from a figure comes from an intersection.
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
-      <a href="../articles/01-fill_strips_top.html">fill_strips_top()</a>
-    </li>
-    <li>
-      <a href="../articles/02-fill_strips_right.html">fill_strips_right()</a>
+      <a href="../articles/01-fill_strips.html">fill_strips_top()</a>
     </li>
     <li>
       <a href="../articles/03-stat_summary_boxplot.html">stat_summary_boxplot()</a>
@@ -79,36 +76,51 @@ It is useful to inidcate that the data from a figure comes from an intersection.
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">shaded_2d_venn</span><span class="op">(</span>
-  highlight <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AB"</span>, <span class="st">"AnoB"</span>, <span class="st">"noAB"</span><span class="op">)</span>,
-  color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"pink"</span>, <span class="st">"blue"</span><span class="op">)</span>,
-  label <span class="op">=</span> <span class="cn">NULL</span>,
-  label.pos <span class="op">=</span> <span class="st">"bottom.right"</span>,
-  label.face <span class="op">=</span> <span class="st">"italic"</span>,
-  label.size <span class="op">=</span> <span class="fl">13</span>,
-  label.col <span class="op">=</span> <span class="st">"black"</span>,
-  line.col <span class="op">=</span> <span class="st">"black"</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">shaded_2d_venn</span><span class="op">(</span></span>
+<span>  highlight <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AB"</span>, <span class="st">"AnoB"</span>, <span class="st">"noAB"</span><span class="op">)</span>,</span>
+<span>  color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"pink"</span>, <span class="st">"blue"</span><span class="op">)</span>,</span>
+<span>  label <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  label.pos <span class="op">=</span> <span class="st">"bottom.right"</span>,</span>
+<span>  label.face <span class="op">=</span> <span class="st">"italic"</span>,</span>
+<span>  label.size <span class="op">=</span> <span class="fl">13</span>,</span>
+<span>  label.col <span class="op">=</span> <span class="st">"black"</span>,</span>
+<span>  line.col <span class="op">=</span> <span class="st">"black"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>highlight</dt>
 <dd><p>Character of length 1 to 3. One of c("AB", "AnoB", "noAB") or 'all'. If 'all', highlights all the areas. Default = c("AB", "AnoB", "noAB").</p></dd>
+
+
 <dt>color</dt>
 <dd><p>Character of length 1 to 3. The same length as highlight. Colors of the highlighted areas. Default =  c("red", "pink", "blue").</p></dd>
+
+
 <dt>label</dt>
 <dd><p>Character of length 1 or NULL. Label to draw next to the Venn. If NULL, does not write any label. Default = NULL.</p></dd>
+
+
 <dt>label.pos</dt>
 <dd><p>Character of length 1. One of c("bottom.right", "right.bottom", "bottom.centre", "centre.bottom", "bottom.center", "center.bottom", "top.centre", "centre.top", "top.center", "center.top", "bottom.left", "left.bottom", "top.right", "right.top", "top.left", "left.top"). Position of the label if 'label' is not NULL. Default = 'bottom.right'</p></dd>
+
+
 <dt>label.face</dt>
 <dd><p>Character of length 1. Fontface of the label. Default = "italic"</p></dd>
+
+
 <dt>label.size</dt>
 <dd><p>Numeric of length 1. Size of the label. Default = 13</p></dd>
+
+
 <dt>label.col</dt>
 <dd><p>Character of length 1. Color of the label. Default = "black"</p></dd>
+
+
 <dt>line.col</dt>
 <dd><p>Character of length 1. Color of the line of the venn. Default = "black"</p></dd>
+
 </dl></div>
     <div id="author">
     <h2>Author</h2>
@@ -127,7 +139,7 @@ It is useful to inidcate that the data from a figure comes from an intersection.
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
