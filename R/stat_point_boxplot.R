@@ -20,7 +20,8 @@
 stat_point_boxplot <- function(stat = "mean",
                                width = .5,
                                point_size = 2,
-                               point_color = "red"){
+                               point_color = "red",
+                               point_shape = 1){
 
   # Check and format the inputs.
   if(is.character(stat)){ stat <- tolower(stat) }
@@ -46,7 +47,7 @@ stat_point_boxplot <- function(stat = "mean",
   }
 
   # Call stat summary with the infor function
-  stat_summary(fun.data = calc_point_boxplot, geom = "point", size = point_size, color = point_color, position = position_dodge(width = width))
+  stat_summary(fun.data = calc_point_boxplot, geom = "point", size = point_size, color = point_color, shape = point_shape, position = position_dodge(width = width))
 }
 
 

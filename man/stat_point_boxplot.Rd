@@ -8,7 +8,8 @@ stat_point_boxplot(
   stat = "mean",
   width = 0.5,
   point_size = 2,
-  point_color = "red"
+  point_color = "red",
+  point_shape = 1
 )
 }
 \arguments{

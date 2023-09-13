@@ -46,6 +46,9 @@ p + stat_point_boxplot(stat = "mean") + labs(title = "Boxplots with mean of obse
 p + stat_point_boxplot(stat = "median") + labs(title = "Boxplots with median of observations")
 p + stat_point_boxplot(stat = "min") + labs(title = "Boxplots with smallest observation")
 p + stat_point_boxplot(stat = "max") + labs(title = "Boxplots with highest observation")
+
+
+
 ```
 
 
