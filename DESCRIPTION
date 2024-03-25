@@ -1,6 +1,6 @@
 Package: ggmitji
 Title: Useful functions for ggplot.
-Version: 4.0.0
+Version: 4.0.1
 Author: Adria Mitjavila-Ventura
 Maintainer: Adria Mitjavila-Ventura <adria.mitjavila94@gmail.com>
 Description: Cool functions for `ggplot2`-based plots.

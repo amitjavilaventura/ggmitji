@@ -2,6 +2,54 @@
 # theme_custom() #
 # -------------- #
 
+#' @title theme_clean
+#' @author amitjavilaventura
+#'
+#' @description
+#' Custom theme for ggplot2 that allows to customize almost everything from the plot, the grid and the text.
+#' It uses other parameters passed through `ggplot2::theme()`
+#'
+#' @seealso `ggplot2::theme()`
+#'
+#' @export
+theme_clean <- function(legend="right",
+                        title.face="italic", title.size=10, title.color="black",
+                        subtitle.face="plain", subtitle.size=9, subtitle.color="black",
+                        caption.face="plain", caption.size=7, caption.color="black",
+                        strip.text.face="plain", strip.text.size=8, strip.text.color="black",
+                        axis.text.face="plain", axis.text.size=8, axis.text.color="black",
+                        x.text.angle=90,
+                        clean.x.axis=F, remove.x.axis=F, clean.y.axis=T, remove.y.axis=F,
+                        add.h.grid=T, add.v.grid=F){
+
+  if(x.text.angle == 90) { x.text.hjust=1; x.text.vjust=.5 } else if( x.text.angle == 0) { x.text.hjust=.5; x.text.vjust=1 } else { x.text.hjust=1; x.text.vjust=1 }
+
+  t <- theme_classic() +
+    theme(legend.position = legend, legend.title = element_blank(),
+          plot.title = element_text(hjust=.5, face=title.face, size=title.size, color=title.color),
+          plot.subtitle = element_text(hjust=.5, face=subtitle.face, size=subtitle.size, color=subtitle.color),
+          strip.background = element_blank(), strip.text = element_text(face=strip.text.face, size=strip.text.size, color=strip.text.color),
+          axis.text.x = element_text(angle=x.text.angle, hjust=x.text.hjust, vjust=x.text.vjust),
+          axis.text = element_text(face=axis.text.face, size=axis.text.size, color=axis.text.color),
+          axis.line = element_line(color="black", linewidth = .2))
+
+
+
+  if(clean.x.axis) { t <- t + theme(axis.line.x=element_blank(), axis.ticks.x=element_blank()) }
+  if(clean.y.axis) { t <- t + theme(axis.line.y=element_blank(), axis.ticks.y=element_blank()) }
+  if(remove.x.axis) { t <- t +  theme(axis.line.x=element_blank(), axis.ticks.x=element_blank(), axis.title.x=element_blank(), axis.text.x=element_blank()) }
+  if(remove.y.axis) { t <- t +  theme(axis.line.y=element_blank(), axis.ticks.y=element_blank(), axis.title.y=element_blank(), axis.text.y=element_blank()) }
+
+  if(add.h.grid) { t <- t + theme(panel.grid.major.y = element_line(color="gray50", linewidth=.3, linetype="dashed"))}
+  if(add.v.grid) { t <- t + theme(panel.grid.major.x = element_line(color="gray50", linewidth=.3, linetype="dashed"))}
+
+  t
+}
+
+# -------------- #
+# theme_custom() #
+# -------------- #
+
 #' @title theme_custom
 #' @author amitjavilaventura
 #'

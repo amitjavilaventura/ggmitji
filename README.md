@@ -13,7 +13,8 @@ Useful custom functions made with or for `ggplot2`.
 * `shaded_2d_venn()`: creates a 2D Venn diagram with the desired highlighted areas.
 * `shaded_3d_venn()`: creates a 3D Venn diagram with the desired highlighted areas.
 * `draw_polygon()`: draws a polygon in several shapes (e.g. square, triangle, L-like...).
-* `theme_custom()`: custom theme for ggplot that allows to customize almost everything from a plot
+* `theme_clean()`: custom theme for ggplots that allows to customize almost everything from a plot.
+* `theme_custom()`: custom theme for ggplots that allows to customize almost everything from a plot.
 * `theme_ggvenn()`: custom theme for ggplot-based Venn diagrams, specially designed for plots made with `ggvenn::ggvenn()`. 
 * `remove_axis()`: remove the axes of a ggplot.
 * `remove_x_axis()`: remove the X axis of a ggplot.
@@ -89,3 +90,6 @@ If you use this package, please cite [this repository](https://github.com/amitja
   
 * `4.0.0`:
   + Add new function: `stat_line_boxplot()`.
+  
+* `4.0.1`:
+  + Add new theme: `theme_clean()`.
